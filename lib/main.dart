@@ -19,20 +19,71 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 backgroundColor: Colors.white,
+                backgroundImage:
+                    AssetImage("assets/images/profil.picture.jpeg"),
                 radius: 50,
               ),
-              Text(
+              const Text(
                 "Vianney Anibe",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900),
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Pacifico",
+                    color: Colors.white),
               ),
-              Text(
-                "Vianney Anibe",
+              const Text(
+                "Développeur mobile Flutter",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: "SourceSansPro1"),
               ),
-              TextField(
-                decoration: InputDecoration(),
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "+225 0140990499",
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: "Source Sans Pro",
+                        fontSize: 20.0),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "anibe.v3@gmail.com",
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: "Source Sans Pro",
+                        fontSize: 20.0),
+                  ),
+                ),
               )
             ],
           ),
